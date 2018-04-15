@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Pamajas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h5 class="text-center">Pour avoir accès à vos mots de passe, il faut déverrouiller l'application avec votre mot de passe principal</h5>
+
+  <form (ngSubmit)="login()">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Mot de passe</ion-label>
+        <ion-input type="password" name="masterPassword" [(ngModel)]="inMasterPwd"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <button type="submit" ion-button block>Connexion</button>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>
