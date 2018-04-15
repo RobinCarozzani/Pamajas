@@ -1,1 +1,19 @@
-TODO
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Applications</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item *ngFor="let app of applications">
+      <h2 class="text-uppercase">{{ app.name }}</h2>
+      <p>Créé le {{ app.credentials.creationDate | date:'dd/MM/yyyy' }}</p>
+      <p *ngIf="app.credentials.lastModified">Modifié le {{ app.credentials.lastModified | date:'dd/MM/yyyy' }}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
