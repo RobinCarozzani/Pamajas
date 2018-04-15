@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Application } from '../../model/application';
+import { ApplicationsService } from '../../services/applications.service';
 
 @Component({
   selector: 'page-appList',
@@ -8,9 +9,9 @@ import { Application } from '../../model/application';
 export class AppList {
   public applications: Application[];
 
-  constructor() {}
+  constructor(private applicationsService: ApplicationsService) {}
 
   ionViewDidLoad() {
-    this.applications = [];
+    this.applications = this.applicationsService.getAllApplications();
   }
 }
