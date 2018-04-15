@@ -6,13 +6,16 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
+import { CryptoService } from '../services/crypto.service';
+import { AppList } from '../pages/appList/appList';
 
 @NgModule({
-  declarations: [MyApp, LoginPage],
+  declarations: [MyApp, LoginPage, AppList],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
-  entryComponents: [MyApp, LoginPage],
+  entryComponents: [MyApp, LoginPage, AppList],
   providers: [
+    CryptoService,
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler }

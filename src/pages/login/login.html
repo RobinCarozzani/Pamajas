@@ -8,18 +8,18 @@
 
 
 <ion-content padding>
-  <div>
-    <h5 class="text-center">Pour avoir à vos mots de passe, il faut déverrouiller l'application avec votre mot de passe principal</h5>
+  <h5 class="text-center">Pour avoir accès à vos mots de passe, il faut déverrouiller l'application avec votre mot de passe principal</h5>
 
+  <form (ngSubmit)="login()">
     <ion-list>
       <ion-item>
         <ion-label floating>Mot de passe</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password" name="masterPassword" [(ngModel)]="inMasterPwd"></ion-input>
       </ion-item>
 
       <ion-item>
-        <button ion-button block>Connexion</button>
+        <button type="submit" ion-button block>Connexion</button>
       </ion-item>
     </ion-list>
-  </div>
+  </form>
 </ion-content>
