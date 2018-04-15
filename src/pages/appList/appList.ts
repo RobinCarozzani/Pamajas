@@ -3,6 +3,7 @@ import { Application } from '../../model/application';
 import { ApplicationsService } from '../../services/applications.service';
 import { NavController } from 'ionic-angular';
 import { AppDetail } from '../appDetail/appDetail';
+import { NewApp } from '../newApp/newApp';
 
 @Component({
   selector: 'page-appList',
@@ -22,5 +23,9 @@ export class AppList {
 
   public openDetails(app: Application): void {
     this.navCtrl.push(AppDetail);
+  }
+
+  public newApp(): void {
+    this.navCtrl.push(NewApp);
   }
 }
