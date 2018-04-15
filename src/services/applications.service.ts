@@ -5,6 +5,7 @@ export class ApplicationsService {
     // TODO actual retrieval of applications
     return [
       {
+        id: 1,
         credentials: {
           creationDate: new Date(),
           lastModified: new Date(),
@@ -15,11 +16,13 @@ export class ApplicationsService {
         url: 'url'
       },
       {
+        id: 2,
         credentials: { creationDate: new Date(), salt: '', hash: '' },
         name: 'nom',
         url: 'url'
       },
       {
+        id: 3,
         credentials: { creationDate: new Date(), salt: '', hash: '' },
         name: 'nom',
         url: 'url'

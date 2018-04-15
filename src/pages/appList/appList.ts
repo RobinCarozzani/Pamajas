@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Application } from '../../model/application';
 import { ApplicationsService } from '../../services/applications.service';
+import { NavController } from 'ionic-angular';
+import { AppDetail } from '../appDetail/appDetail';
 
 @Component({
   selector: 'page-appList',
@@ -9,9 +11,16 @@ import { ApplicationsService } from '../../services/applications.service';
 export class AppList {
   public applications: Application[];
 
-  constructor(private applicationsService: ApplicationsService) {}
+  constructor(
+    private applicationsService: ApplicationsService,
+    private navCtrl: NavController
+  ) {}
 
   ionViewDidLoad() {
     this.applications = this.applicationsService.getAllApplications();
+  }
+
+  public openDetails(app: Application): void {
+    this.navCtrl.push(AppDetail);
   }
 }
