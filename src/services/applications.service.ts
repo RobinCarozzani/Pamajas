@@ -12,20 +12,20 @@ export class ApplicationsService {
           salt: '',
           hash: ''
         },
-        name: 'nom',
-        url: 'url'
+        name: 'nom1',
+        url: 'url1'
       },
       {
         id: 2,
         credentials: { creationDate: new Date(), salt: '', hash: '' },
-        name: 'nom',
-        url: 'url'
+        name: 'nom2',
+        url: 'url2'
       },
       {
         id: 3,
         credentials: { creationDate: new Date(), salt: '', hash: '' },
-        name: 'nom',
-        url: 'url'
+        name: 'nom3',
+        url: 'url3'
       }
     ];
   }
