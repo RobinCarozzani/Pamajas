@@ -22,7 +22,9 @@ export class AppList {
   }
 
   public openDetails(app: Application): void {
-    this.navCtrl.push(AppDetail);
+    this.navCtrl.push(AppDetail, {
+      application: app
+    });
   }
 
   public newApp(): void {

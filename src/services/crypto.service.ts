@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Credentials } from '../model/credentials';
 
 @Injectable()
 export class CryptoService {
@@ -13,5 +14,10 @@ export class CryptoService {
 
   public setCurrentMasterPassword(password: string): void {
     this.masterPassword = password;
+  }
+
+  public decypher(credentials: Credentials): string {
+    // TODO
+    return 'P@55wOr!)';
   }
 }
