@@ -9,6 +9,7 @@ export class ApplicationsService {
         credentials: {
           creationDate: new Date(),
           lastModified: new Date(),
+          login: 'test@test.ts',
           salt: '',
           hash: ''
         },
@@ -17,13 +18,23 @@ export class ApplicationsService {
       },
       {
         id: 2,
-        credentials: { creationDate: new Date(), salt: '', hash: '' },
+        credentials: {
+          creationDate: new Date(),
+          login: 'test@test.ts',
+          salt: '',
+          hash: ''
+        },
         name: 'nom2',
         url: 'url2'
       },
       {
         id: 3,
-        credentials: { creationDate: new Date(), salt: '', hash: '' },
+        credentials: {
+          creationDate: new Date(),
+          login: 'test@test.ts',
+          salt: '',
+          hash: ''
+        },
         name: 'nom3',
         url: 'url3'
       }
