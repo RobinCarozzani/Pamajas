@@ -2,7 +2,7 @@
   <ion-navbar>
     <ion-title *ngIf="currentApplication">{{ currentApplication.name }}</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only>
+      <button ion-button icon-only (click)="edit()">
         <ion-icon name="create"></ion-icon>
       </button>
     </ion-buttons>
@@ -26,9 +26,9 @@
         Mot de passe
       </ion-card-header>
       <ion-card-content>
-        *****
-        <button type="button" ion-button block>
-          Voir
+        {{ displayedPassword }}
+        <button type="button" ion-button block (click)="tooglePasswordVisibility()">
+          {{ passwordIsVisible ? 'Masquer' : 'Voir' }}
         </button>
       </ion-card-content>
     </ion-card>
