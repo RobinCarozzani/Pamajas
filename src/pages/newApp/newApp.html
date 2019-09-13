@@ -20,7 +20,11 @@
         <ion-list>
           <ion-item>
             <ion-label floating>Définir</ion-label>
-            <ion-input type="text" name="service" [(ngModel)]="application.name"></ion-input>
+            <ion-input
+              type="text"
+              name="service"
+              [(ngModel)]="application.name"
+            ></ion-input>
           </ion-item>
         </ion-list>
       </ion-card-content>
@@ -34,7 +38,11 @@
         <ion-list>
           <ion-item>
             <ion-label floating>Définir</ion-label>
-            <ion-input type="text" name="login" [(ngModel)]="application.credentials.login"></ion-input>
+            <ion-input
+              type="text"
+              name="login"
+              [(ngModel)]="application.credentials.login"
+            ></ion-input>
           </ion-item>
         </ion-list>
       </ion-card-content>
@@ -47,11 +55,13 @@
       <ion-card-content>
         <ion-list>
           <ion-item *ngIf="!editionMode">
-            <button ion-button outline>Définir</button>
+            <button ion-button outline (click)="newPassword()">Définir</button>
           </ion-item>
           <ion-item *ngIf="editionMode">
             <ion-label>*****</ion-label>
-            <button ion-button outline item-end>Modifier</button>
+            <button ion-button outline item-end (click)="newPassword()">
+              Modifier
+            </button>
           </ion-item>
         </ion-list>
       </ion-card-content>
